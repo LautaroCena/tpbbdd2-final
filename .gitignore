@@ -1,0 +1,48 @@
+# =========================
+# SQL Server
+# =========================
+*.mdf
+*.ldf
+*.ndf
+
+# Backups
+*.bak
+*.trn
+
+# =========================
+# Visual Studio / SSIS
+# =========================
+.vs/
+bin/
+obj/
+
+*.user
+*.suo
+*.dtproj.user
+
+# SSIS cache/temp
+*.ispac
+
+# =========================
+# Power BI temporales
+# =========================
+*.tmp
+
+# =========================
+# Windows
+# =========================
+Thumbs.db
+desktop.ini
+
+# =========================
+# Python (por si usan scripts)
+# =========================
+__pycache__/
+*.pyc
+
+# =========================
+# Archivos comprimidos
+# =========================
+*.zip
+*.rar
+*.7z
