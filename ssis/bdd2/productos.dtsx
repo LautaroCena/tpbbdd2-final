@@ -1,0 +1,493 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/18/2026 10:13:16 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-K4EILBVQ"
+  DTS:CreatorName="LAPTOP-K4EILBVQ\Beto"
+  DTS:DTSID="{F3E46405-E7F7-430B-A556-7FFA4FCDEA77}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{492BC371-5F5F-495D-91AF-99D45099001B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{33654F15-2D95-4894-B154-85AE92376DC4}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\temp\tpbbdd2\data_raw\Fuentes de Datos TP Final-20260516\Area Produccion\Products.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Productoid"
+              DTS:DTSID="{01CBD192-623E-467F-94A2-5C156C8A4B58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DescProducto"
+              DTS:DTSID="{1045E7AB-5BDC-496B-8918-CCB3B03729C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PresentProducto"
+              DTS:DTSID="{B422771B-E32D-4061-998A-638B7F848DAC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Productos a la staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{A4E55B41-155D-43B3-8922-F86B1B82BD21}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Productos a la staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar Productos a la staging\Prodcutos_txt"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="3082"
+              name="Prodcutos_txt"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Productos a la staging\Prodcutos_txt.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[Productoid]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].ExternalColumns[Productoid]"
+                      length="50"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[Productoid]"
+                      name="Productoid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[DescProducto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].ExternalColumns[DescProducto]"
+                      length="50"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[DescProducto]"
+                      name="DescProducto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[PresentProducto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].ExternalColumns[PresentProducto]"
+                      length="50"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[PresentProducto]"
+                      name="PresentProducto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].ExternalColumns[Productoid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Productoid" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].ExternalColumns[DescProducto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DescProducto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].ExternalColumns[PresentProducto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PresentProducto" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Productos a la staging\stg_productos"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="stg_productos"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[stg_productos]</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Productos a la staging\stg_productos.Connections[IDbConnection]"
+                  connectionManagerID="{91B3B481-F7F9-47B4-B168-4D5CE3391AAC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost_MSSQLSERVER03.staging]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].Columns[Productoid]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Productoid"
+                      externalMetadataColumnId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Productoid]"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[Productoid]" />
+                    <inputColumn
+                      refId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].Columns[DescProducto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DescProducto"
+                      externalMetadataColumnId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].ExternalColumns[DescProducto]"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[DescProducto]" />
+                    <inputColumn
+                      refId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].Columns[PresentProducto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PresentProducto"
+                      externalMetadataColumnId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].ExternalColumns[PresentProducto]"
+                      lineageId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano].Columns[PresentProducto]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Productoid]"
+                      dataType="wstr"
+                      length="50"
+                      name="Productoid" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].ExternalColumns[DescProducto]"
+                      dataType="wstr"
+                      length="50"
+                      name="DescProducto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET].ExternalColumns[PresentProducto]"
+                      dataType="wstr"
+                      length="50"
+                      name="PresentProducto" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Productos a la staging\stg_productos.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Productos a la staging\stg_productos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Productos a la staging\stg_productos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Productos a la staging\stg_productos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Productos a la staging\stg_productos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar Productos a la staging.Paths[Salida de origen de archivo plano]"
+              endId="Package\Cargar Productos a la staging\stg_productos.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Cargar Productos a la staging\Prodcutos_txt.Outputs[Salida de origen de archivo plano]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{93D9E279-F643-4AFE-8792-E0B350FCECAE}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{91B3B481-F7F9-47B4-B168-4D5CE3391AAC}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE stg_productos" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{8FE95D60-9E11-49A0-A6E5-0E67CAD40EDF}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Cargar Productos a la staging" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\Cargar Productos a la staging"
+          TopLeft="294.166650594109,166.399998842875" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="323.33331566718,42.4666663713588" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="405.149983130644,84.0666663713588">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82.3333324715164"
+              Start="0,0"
+              End="0,74.8333324715164">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.8333324715164" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar Productos a la staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Cargar Productos a la staging\Prodcutos_txt"
+          TopLeft="456.499993279576,16.045454388315" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\Cargar Productos a la staging\stg_productos"
+          TopLeft="426.363630010323,150.90908866037" />
+        <EdgeLayout
+          Id="Package\Cargar Productos a la staging.Paths[Salida de origen de archivo plano]"
+          TopLeft="527.299993279576,57.645454388315">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-28.9363632692532,93.2636342720553"
+              Start="0,0"
+              End="-28.9363632692532,85.7636342720553">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.6318171360276" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.6318171360276"
+                    Point2="0,46.6318171360276"
+                    Point3="-4,46.6318171360276" />
+                  <mssgle:LineSegment
+                    End="-24.9363632692532,46.6318171360276" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.9363632692532,46.6318171360276"
+                    Point2="-28.9363632692532,46.6318171360276"
+                    Point3="-28.9363632692532,50.6318171360276" />
+                  <mssgle:LineSegment
+                    End="-28.9363632692532,85.7636342720553" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Productos a la staging\stg_productos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

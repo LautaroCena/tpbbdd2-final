@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "bdd2", "bdd2.dtproj", "{73EE5787-4C83-1389-3F33-5C5648C295D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73EE5787-4C83-1389-3F33-5C5648C295D6}.Development|Default.ActiveCfg = Development
+		{73EE5787-4C83-1389-3F33-5C5648C295D6}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {087BD3B7-394C-4AA9-A7A2-19EC4EB7E3E8}
+	EndGlobalSection
+EndGlobal
