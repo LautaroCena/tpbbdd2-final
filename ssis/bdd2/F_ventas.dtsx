@@ -1,0 +1,1176 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/20/2026 9:54:40 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-K4EILBVQ"
+  DTS:CreatorName="LAPTOP-K4EILBVQ\Beto"
+  DTS:DTSID="{69888ED4-FCD3-4DE2-B01E-8E481D5E3091}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="F_ventas"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{E23D21EA-4431-48C4-B98A-AAA1C7E09365}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[132.226.43.0.sales]"
+      DTS:CreationName="ADO.NET:Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5"
+      DTS:DTSID="{AD405E4F-8FF9-4015-BEA9-69119A021F17}"
+      DTS:ObjectName="132.226.43.0.sales">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=132.226.43.0;Initial Catalog=sales;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[132.226.43.0.sales.alumno]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=9.7.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{41E796D7-4DD4-4407-87EC-581A19FF45E3}"
+      DTS:ObjectName="132.226.43.0.sales.alumno">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=132.226.43.0;user id=alumno;database=sales;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABVNOFW6UsK8KoCDQd4TS+oPUBV9IlFgtXO2X/gdEZpdQAAAAAOgAAAAAIAACAAAAD/eIpkrFWEd6bVXL1UOQx/JiqVI7pzfxT5DjahWtVj6RAAAAD1v7aqTRn0gHeAcdaC4RQ4QAAAAOnRd1zt/Q6muj9AeX9DeZnrEiRuScXojYwyl+a2U5zCZuyc/7aHOdADO45ZpMV2pD8yMp3YMD0HGpl7f2emkeg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=9.7.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{8BA6A553-08F7-48C0-84BF-7D826816EB7C}"
+      DTS:ObjectName="132.226.43.0.sales.alumno 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=132.226.43.0;user id=alumno;database=sales;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABfmoZz74CQubQTMIPAeALMEzwkp9uB9uLl724hWdpNaAAAAAAOgAAAAAIAACAAAADt4qHkLQIJrFJIFDugcQvjuMq+NW65f2zUHUjrhrka/xAAAAC1y3z1kHDtrPmLnfWQYy5iQAAAAMiOxVEHxrsxJTCLDPsKAwfK+YVbglVjntA1nJ7ev+gB3EK2LyxLRfR8fKjnoFw690nqCRhrdwRkUOVwTG8oDPI</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=9.7.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{B40D2DB5-6211-436D-8AF4-6610D667E21C}"
+      DTS:ObjectName="132.226.43.0.sales.alumno1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=132.226.43.0;user id=alumno;database=sales;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAqoNI4yTJRDZw+flWQ3yO5ZWUosTMgdcHznraCu3kXgwAAAAAOgAAAAAIAACAAAADgoUcq8ZX0AJ2Mwg6uh7mfWE3NOXaO7o8hVCggDyoFxCAAAACH8sY70LYwFs3lD5VHlpYduZ/i/noBMFAKUnF7dR2wUUAAAABVN4psJwonPEobgMlFAG/Gv/upew4jjLTZTb1gfPwUiWacfOv6os2Yve09keBE9KjNgooc7qRPBITJ7lOF478K</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\MSSQLSERVER03.staging]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{D7944545-6077-4CE6-884C-380904670CA2}"
+      DTS:ObjectName="localhost\MSSQLSERVER03.staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost\MSSQLSERVER03;Initial Catalog=staging;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[server-tuia.database.windows.net.TDChistorySales.alumno]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{62853BCD-2593-4CED-80B2-FD15D95DC54F}"
+      DTS:ObjectName="server-tuia.database.windows.net.TDChistorySales.alumno">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales;Provider=MSOLEDBSQL.1;Initial File Name=;Server SPN=;Authentication=;Access Token=;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACMDMvZe9TnAqV8kUZVUU6j9mkYL2kdzgfBpVd+0FP5GAAAAAAOgAAAAAIAACAAAACKT3R6PHwochTlDxQbGhqA9SDv4kdwgpve04h7ixFGuiAAAADuEL9Vb2N6hadM8Oi15afqXjWqVODqnXJ2w5qFNacf4UAAAACt6XnhpYH28u57KY9kUzOKGQodtljPLLl9vQfD3grO2gX4hh/zEDR88pWDvtQytqS7rYjNz4Bmb+EHEwRY9NJY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[server-tuia.database.windows.net.TDChistorySales.alumno 1]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{C7B06B72-B14B-4516-80F2-8207A7DD1F73}"
+      DTS:ObjectName="server-tuia.database.windows.net.TDChistorySales.alumno 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales;Provider=MSOLEDBSQL.1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACzY9VOIqTPbhQPWMu7kxyuARutKH/woXHwCbp+n1a2gAAAAAAOgAAAAAIAACAAAABYBtKO+aUD5uzbQFNcgV0mzHVI9CbkdLhUKDe4Opfu7yAAAAD+z0ffLRMeT5YxNOLU+DpMgHOQAClNznZHQRIdvJmgZkAAAACnC8xWdZtcqyvaNMnrnsV/lVGVNo6NoJJ+/1nUJwRFu/eIyLXV5dVDS1XLowAMISW+6yW/Pgj2IPbY5m/O+Ddz</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Mysql"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{26B1BCC1-DFC3-4425-BC24-4DC8BFEC2C4C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Mysql"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar Mysql\Mysql Billing"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Mysql Billing"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT BILLING_ID, REGION, BRANCH_ID, `DATE`, CUSTOMER_ID, EMPLOYEE_ID
+FROM sales.billing;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Mysql\Mysql Billing.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[BILLING_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[BILLING_ID]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[BILLING_ID]"
+                      name="BILLING_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[REGION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[REGION]"
+                      length="45"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[REGION]"
+                      name="REGION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[BRANCH_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[BRANCH_ID]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[BRANCH_ID]"
+                      name="BRANCH_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[DATE]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[DATE]"
+                      name="DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[CUSTOMER_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[EMPLOYEE_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[BILLING_ID]"
+                      dataType="i4"
+                      name="BILLING_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[REGION]"
+                      dataType="wstr"
+                      length="45"
+                      name="REGION" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[BRANCH_ID]"
+                      dataType="i4"
+                      name="BRANCH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[DATE]"
+                      dataType="dbTimeStamp"
+                      name="DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[CUSTOMER_ID]"
+                      dataType="i2"
+                      name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="i2"
+                      name="EMPLOYEE_ID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[BILLING_ID]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[BILLING_ID]"
+                      name="BILLING_ID" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[REGION]"
+                      dataType="wstr"
+                      length="45"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[REGION]"
+                      name="REGION" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[BRANCH_ID]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[BRANCH_ID]"
+                      name="BRANCH_ID" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[DATE]"
+                      name="DATE" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[CUSTOMER_ID]"
+                      dataType="i2"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[EMPLOYEE_ID]"
+                      dataType="i2"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Mysql\MySql Billing detail"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="MySql Billing detail"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT BILLING_ID, PRODUCT_ID, QUANTITY
+FROM sales.billing_detail;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Mysql\MySql Billing detail.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].Columns[BILLING_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].ExternalColumns[BILLING_ID]"
+                      lineageId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].Columns[BILLING_ID]"
+                      name="BILLING_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].Columns[PRODUCT_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].ExternalColumns[PRODUCT_ID]"
+                      lineageId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].Columns[PRODUCT_ID]"
+                      name="PRODUCT_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].Columns[QUANTITY]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].ExternalColumns[QUANTITY]"
+                      lineageId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].Columns[QUANTITY]"
+                      name="QUANTITY"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].ExternalColumns[BILLING_ID]"
+                      dataType="i4"
+                      name="BILLING_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].ExternalColumns[PRODUCT_ID]"
+                      dataType="i2"
+                      name="PRODUCT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de origen de ADO NET].ExternalColumns[QUANTITY]"
+                      dataType="i2"
+                      name="QUANTITY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[BILLING_ID]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[BILLING_ID]"
+                      name="BILLING_ID" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[PRODUCT_ID]"
+                      dataType="i2"
+                      lineageId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[PRODUCT_ID]"
+                      name="PRODUCT_ID" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[QUANTITY]"
+                      dataType="i2"
+                      lineageId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[QUANTITY]"
+                      name="QUANTITY" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\MySql Billing detail.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Mysql\stg_billing"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="stg_billing"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[stg_billing]</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Mysql\stg_billing.Connections[IDbConnection]"
+                  connectionManagerID="{91B3B481-F7F9-47B4-B168-4D5CE3391AAC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost_MSSQLSERVER03.staging]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].Columns[BILLING_ID]"
+                      cachedDataType="i4"
+                      cachedName="BILLING_ID"
+                      externalMetadataColumnId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[BILLING_ID]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[BILLING_ID]" />
+                    <inputColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].Columns[REGION]"
+                      cachedDataType="wstr"
+                      cachedLength="45"
+                      cachedName="REGION"
+                      externalMetadataColumnId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[REGION]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[REGION]" />
+                    <inputColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].Columns[BRANCH_ID]"
+                      cachedDataType="i4"
+                      cachedName="BRANCH_ID"
+                      externalMetadataColumnId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[BRANCH_ID]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[BRANCH_ID]" />
+                    <inputColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].Columns[DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DATE"
+                      externalMetadataColumnId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[DATE]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[DATE]" />
+                    <inputColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].Columns[CUSTOMER_ID]"
+                      cachedDataType="i2"
+                      cachedName="CUSTOMER_ID"
+                      externalMetadataColumnId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[CUSTOMER_ID]" />
+                    <inputColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].Columns[EMPLOYEE_ID]"
+                      cachedDataType="i2"
+                      cachedName="EMPLOYEE_ID"
+                      externalMetadataColumnId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET].Columns[EMPLOYEE_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[BILLING_ID]"
+                      dataType="i4"
+                      name="BILLING_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[REGION]"
+                      dataType="wstr"
+                      length="45"
+                      name="REGION" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[BRANCH_ID]"
+                      dataType="i4"
+                      name="BRANCH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[DATE]"
+                      dataType="dbTimeStamp"
+                      name="DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[CUSTOMER_ID]"
+                      dataType="i2"
+                      name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="i2"
+                      name="EMPLOYEE_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Mysql\stg_billing.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Mysql\stg_billing.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\stg_billing.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Mysql\stg_billing.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Mysql\stg_billing.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar Mysql.Paths[Salida de origen de ADO NET]"
+              endId="Package\Cargar Mysql\stg_billing.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Cargar Mysql\Mysql Billing.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cargar stg SQL billing"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{9D25B184-5804-4022-8F38-5B327579A91C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar stg SQL billing"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar stg SQL billing\Billing SQLserver"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Billing SQLserver"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[dbo].[Billing]</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar stg SQL billing\Billing SQLserver.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[server-tuia.database.windows.net.TDChistorySales.alumno 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[server-tuia.database.windows.net.TDChistorySales.alumno 1]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[billing_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[billing_id]"
+                      name="billing_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[date]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[date]"
+                      name="date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[customer_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[customer_id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[customer_id]"
+                      name="customer_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[employee_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[employee_id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[employee_id]"
+                      name="employee_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[product_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[product_id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[product_id]"
+                      name="product_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[quantity]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[quantity]"
+                      name="quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[region]"
+                      length="45"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_id]"
+                      dataType="i4"
+                      name="billing_id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[date]"
+                      dataType="dbTimeStamp"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[customer_id]"
+                      dataType="i4"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[employee_id]"
+                      dataType="i4"
+                      name="employee_id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[product_id]"
+                      dataType="i4"
+                      name="product_id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].ExternalColumns[region]"
+                      dataType="wstr"
+                      length="45"
+                      name="region" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[billing_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[billing_id]"
+                      name="billing_id" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[date]"
+                      name="date" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[customer_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[customer_id]"
+                      name="customer_id" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[employee_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[employee_id]"
+                      name="employee_id" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[product_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[product_id]"
+                      name="product_id" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[quantity]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[quantity]"
+                      name="quantity" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[region]"
+                      dataType="wstr"
+                      length="45"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[region]"
+                      name="region" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar stg SQL billing\Billing_staging"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Billing_staging"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[Billing_staging]</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar stg SQL billing\Billing_staging.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost\MSSQLSERVER03.staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost\MSSQLSERVER03.staging]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].Columns[billing_id]"
+                      cachedDataType="i4"
+                      cachedName="billing_id"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[billing_id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[billing_id]" />
+                    <inputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].Columns[date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="date"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[date]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[date]" />
+                    <inputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].Columns[customer_id]"
+                      cachedDataType="i4"
+                      cachedName="customer_id"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[customer_id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[customer_id]" />
+                    <inputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].Columns[employee_id]"
+                      cachedDataType="i4"
+                      cachedName="employee_id"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[employee_id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[employee_id]" />
+                    <inputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].Columns[product_id]"
+                      cachedDataType="i4"
+                      cachedName="product_id"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[product_id]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[product_id]" />
+                    <inputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].Columns[quantity]"
+                      cachedDataType="i4"
+                      cachedName="quantity"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[quantity]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[quantity]" />
+                    <inputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].Columns[region]"
+                      cachedDataType="wstr"
+                      cachedLength="45"
+                      cachedName="region"
+                      externalMetadataColumnId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[region]"
+                      lineageId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET].Columns[region]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[billing_id]"
+                      dataType="i4"
+                      name="billing_id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[date]"
+                      dataType="dbTimeStamp"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[customer_id]"
+                      dataType="i4"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[employee_id]"
+                      dataType="i4"
+                      name="employee_id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[product_id]"
+                      dataType="i4"
+                      name="product_id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET].ExternalColumns[region]"
+                      dataType="wstr"
+                      length="45"
+                      name="region" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar stg SQL billing\Billing_staging.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing_staging.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar stg SQL billing\Billing_staging.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar stg SQL billing\Billing_staging.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar stg SQL billing.Paths[Salida de origen de ADO NET]"
+              endId="Package\Cargar stg SQL billing\Billing_staging.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Cargar stg SQL billing\Billing SQLserver.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Cargar Mysql"
+          TopLeft="546.666636798118,134.333332399196" />
+        <NodeLayout
+          Size="180,87.2"
+          Id="Package\Cargar stg SQL billing"
+          TopLeft="120.833326731291,142.999999005596" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar Mysql">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Cargar Mysql\Mysql Billing"
+          TopLeft="223.99999666214,197.99999704957" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Cargar Mysql\MySql Billing detail"
+          TopLeft="536.999991998076,196.999997064471" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\Cargar Mysql\stg_billing"
+          TopLeft="195.999997079372,378.99999435246" />
+        <EdgeLayout
+          Id="Package\Cargar Mysql.Paths[Salida de origen de ADO NET]"
+          TopLeft="291.99999666214,239.59999704957">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33.599999582768,139.39999730289"
+              Start="0,0"
+              End="-33.599999582768,131.89999730289">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.699998651445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,65.699998651445"
+                    Point2="0,69.699998651445"
+                    Point3="-4,69.699998651445" />
+                  <mssgle:LineSegment
+                    End="-29.599999582768,69.699998651445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.599999582768,69.699998651445"
+                    Point2="-33.599999582768,69.699998651445"
+                    Point3="-33.599999582768,73.699998651445" />
+                  <mssgle:LineSegment
+                    End="-33.599999582768,131.89999730289" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Mysql\Mysql Billing">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Mysql\MySql Billing detail">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Mysql\stg_billing">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Cargar stg SQL billing">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Cargar stg SQL billing\Billing_staging"
+          TopLeft="303.333316759931,260.866664852632" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Cargar stg SQL billing\Billing SQLserver"
+          TopLeft="290.833317442901,99.6666659735971" />
+        <EdgeLayout
+          Id="Package\Cargar stg SQL billing.Paths[Salida de origen de ADO NET]"
+          TopLeft="373.283317101416,141.266665973597">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,119.599998879035"
+              Start="0,0"
+              End="0,112.099998879035">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,112.099998879035" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar stg SQL billing\Billing SQLserver">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar stg SQL billing\Billing_staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

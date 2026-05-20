@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{E6A2759F-8123-44B3-B1C2-91001CBE1540}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{F12FF758-D3B0-4BB2-AF2A-444DA5DB830B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -973,47 +973,81 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="168.8,41.6"
-          Id="Package\Cargar_Clientes_W"
-          TopLeft="199.16665578468,137.799999041756" />
-        <NodeLayout
-          Size="167.2,52.8"
-          Id="Package\Cargar_Clientes_R"
-          TopLeft="571.666635432178,77.9999994575978" />
+          Size="164,41.6"
+          Id="Package\Borrar_Clientes_R"
+          TopLeft="359.999980330468,73.6666661543979" />
         <NodeLayout
           Size="166.4,41.6"
           Id="Package\Borrar_Clientes_W"
           TopLeft="12.4999993170301,68.466666190558" />
         <NodeLayout
-          Size="164,41.6"
-          Id="Package\Borrar_Clientes_R"
-          TopLeft="359.999980330468,73.6666661543979" />
+          Size="167.2,52.8"
+          Id="Package\Cargar_Clientes_R"
+          TopLeft="572.49996871998,145.599998987516" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\Cargar_Clientes_W"
+          TopLeft="192.499989482264,155.999998915195" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="467.999980330468,115.266666154398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.099988389512,30.3333328331179"
+              Start="0,0"
+              End="188.099988389512,22.8333328331179">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.30917854097539" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.30917854097539"
+                    Point2="0,12.3091785409754"
+                    Point3="4,12.3091785409754" />
+                  <mssgle:LineSegment
+                    End="184.099988389512,12.3091785409754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="184.099988389512,12.3091785409754"
+                    Point2="188.099988389512,12.3091785409754"
+                    Point3="188.099988389512,16.3091785409754" />
+                  <mssgle:LineSegment
+                    End="188.099988389512,22.8333328331179" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="95.6999993170301,110.066666190558">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="161.06665646765,27.733332851198"
+              EndConnector="154.399990165234,45.9333327246375"
               Start="0,0"
-              End="161.06665646765,20.233332851198">
+              End="154.399990165234,38.4333327246375">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.4837555819797" />
+                    End="0,23.3012202954887" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.4837555819797"
-                    Point2="0,16.4837555819797"
-                    Point3="4,16.4837555819797" />
+                    Point1="0,23.3012202954887"
+                    Point2="0,27.3012202954887"
+                    Point3="4,27.3012202954887" />
                   <mssgle:LineSegment
-                    End="157.06665646765,16.4837555819797" />
+                    End="150.399990165234,27.3012202954887" />
                   <mssgle:CubicBezierSegment
-                    Point1="157.06665646765,16.4837555819797"
-                    Point2="161.06665646765,16.4837555819797"
-                    Point3="161.06665646765,20.4837555819797" />
+                    Point1="150.399990165234,27.3012202954887"
+                    Point2="154.399990165234,27.3012202954887"
+                    Point3="154.399990165234,31.3012202954887" />
                   <mssgle:LineSegment
-                    End="161.06665646765,20.233332851198" />
+                    End="154.399990165234,38.4333327246375" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1024,64 +1058,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
-          TopLeft="310.36665578468,137.799999041756">
+          TopLeft="303.699989482264,155.999998915195">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="131.633324545788,-22.5333328873582"
+              EndConnector="112.299990848204,-40.7333327607976"
               Start="0,0"
-              End="131.633324545788,-15.0333328873582">
+              End="112.299990848204,-33.2333327607976">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-5.14028150923825" />
+                    End="0,-16.3597694395317" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-5.14028150923825"
-                    Point2="0,-9.14028150923825"
-                    Point3="4,-9.14028150923825" />
+                    Point1="0,-16.3597694395317"
+                    Point2="0,-20.3597694395317"
+                    Point3="4,-20.3597694395317" />
                   <mssgle:LineSegment
-                    End="127.633324545788,-9.14028150923825" />
+                    End="108.299990848204,-20.3597694395317" />
                   <mssgle:CubicBezierSegment
-                    Point1="127.633324545788,-9.14028150923825"
-                    Point2="131.633324545788,-9.14028150923825"
-                    Point3="131.633324545788,-13.1402815092383" />
+                    Point1="108.299990848204,-20.3597694395317"
+                    Point2="112.299990848204,-20.3597694395317"
+                    Point3="112.299990848204,-24.3597694395317" />
                   <mssgle:LineSegment
-                    End="131.633324545788,-15.0333328873582" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="523.999980330468,94.4666661543979">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="47.6666551017104,9.93333330319992"
-              Start="0,0"
-              End="40.1666551017104,9.93333330319992">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="19.8333275508552,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.8333275508552,0"
-                    Point2="23.8333275508552,0"
-                    Point3="23.8333275508552,4" />
-                  <mssgle:LineSegment
-                    End="23.8333275508552,5.93333330319992" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.8333275508552,5.93333330319992"
-                    Point2="23.8333275508552,9.93333330319992"
-                    Point3="27.8333275508552,9.93333330319992" />
-                  <mssgle:LineSegment
-                    End="40.1666551017104,9.93333330319992" />
+                    End="112.299990848204,-33.2333327607976" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1093,44 +1093,6 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <TaskHost
-    design-time-name="Package\Cargar_Clientes_W">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="132,41.6"
-          Id="Package\Cargar_Clientes_W\Clientes_W"
-          TopLeft="154.166658243372,50.2666663171185" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Cargar_Clientes_W\Clientes_W_staging"
-          TopLeft="130.833326184916,219.266665141914" />
-        <EdgeLayout
-          Id="Package\Cargar_Clientes_W.Paths[cliente]"
-          TopLeft="218.299992214144,91.8666663171185">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,127.399998824795"
-              Start="0,0"
-              End="0,119.899998824795">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,119.899998824795" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <TaskHost
     design-time-name="Package\Cargar_Clientes_R">
     <LayoutInfo>
@@ -1170,15 +1132,53 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Cargar_Clientes_W\Clientes_W_staging">
+    design-time-name="Package\Cargar_Clientes_R\Clientes_R_Staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Cargar_Clientes_W">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="132,41.6"
+          Id="Package\Cargar_Clientes_W\Clientes_W"
+          TopLeft="154.166658243372,50.2666663171185" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Cargar_Clientes_W\Clientes_W_staging"
+          TopLeft="130.833326184916,219.266665141914" />
+        <EdgeLayout
+          Id="Package\Cargar_Clientes_W.Paths[cliente]"
+          TopLeft="218.299992214144,91.8666663171185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,127.399998824795"
+              Start="0,0"
+              End="0,119.899998824795">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,119.899998824795" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Cargar_Clientes_R\Clientes_R_Staging">
+    design-time-name="Package\Cargar_Clientes_W\Clientes_W_staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
