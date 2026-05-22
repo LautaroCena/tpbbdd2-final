@@ -7,12 +7,12 @@
   DTS:CreatorName="LAPTOP-K4EILBVQ\Beto"
   DTS:DTSID="{2AFA4D1A-322D-4743-B328-C6661BE415B3}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="3082"
   DTS:ObjectName="Dim_Holidays"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{131950A7-26D5-4CB4-B75B-4C53773A433E}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{C30DDB3E-3408-47C3-BEBB-6668D898785B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -99,7 +99,7 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -330,11 +330,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153.6,41.6"
+          Size="154,42"
           Id="Package\Borrar_hollidays"
           TopLeft="291.666650730703,61.5333329054382" />
         <NodeLayout
-          Size="173.6,41.6"
+          Size="174,42"
           Id="Package\Cargar_holidays_stg"
           TopLeft="286.666651003891,208.866665214234" />
         <EdgeLayout
@@ -368,11 +368,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="118.4,41.6"
+          Size="118,42"
           Id="Package\Cargar_holidays_stg\Holidays"
           TopLeft="317.499982652566,41.5999997107188" />
         <NodeLayout
-          Size="157.6,41.6"
+          Size="158,42"
           Id="Package\Cargar_holidays_stg\Holidays_staging"
           TopLeft="296.666650457515,196.733331965274" />
         <EdgeLayout

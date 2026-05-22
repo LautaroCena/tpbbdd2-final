@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="F_ventas"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{9DEB29E6-D0D2-4ACD-9B13-B8CB68342385}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{C17126A7-A761-47D1-AD17-44E73D882EDC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -33,12 +33,7 @@
       DTS:ObjectName="132.226.43.0.sales.alumno">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="server=132.226.43.0;user id=alumno;database=sales;">
-          <DTS:Password
-            DTS:Name="password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACUjK13NgX3NEZKYvXsO7JXUZYK7+8iwwNlSIOo0DzCzQAAAAAOgAAAAAIAACAAAADkUcS3HofxE3gVG2b4+/0UQcAy7m9oV1Ug15vPI3DlcRAAAADIAiUMwmjwix1aiVgwMDWoQAAAAAQWUTq8SRv0WYCPoUcfxDzLyDJKR2jNpjXil/b0GxUk9KrNtm9Sv9kZo6fFWbdDHKtE1iDWirY9HW2H+aW2Cak</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="server=132.226.43.0;user id=alumno;database=sales;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -52,22 +47,22 @@
           <DTS:Password
             DTS:Name="password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADfXLpeAsth2QX+8YDqTL/f346d5hjV5eOSobOFKnE6TgAAAAAOgAAAAAIAACAAAABlJZ9KXURxjzzn+qxRa8c/kvMyqt6Fy4bSuPdq0nkWJRAAAABHtubPvAFUqP6t/XIVCmglQAAAAG29UI3wT13kxAPRhN6oNTJWAeBH7u5jYxjE2L6X7UNwy71wLw6ChVoTY4U4CEH7S9ibCUlZfULX/tsWHXYpbSI</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASkJti+TRz0uLovbpwFZvqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADAtc5dCZPQAJmZCOKk4nCbrwrQ5qrko62E/glqN3KW+AAAAAAOgAAAAAIAACAAAACD/kQaG8NjBuTWYUM1IQ0WmDyFheAnwTBwAcH8d1HHyiAAAAB1CjjFA55RqHX1zAMUkzmw1AAs7/ZNaNk/em100SKswEAAAABlzFolBRtLe3i1PNPGXkBKRHZ2PhYOAU/1jcg7eD0tEn19ZhtZkVV+/4qnaE33NQgaMFrApYf+foWOKYphVCw0</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+      DTS:refId="Package.ConnectionManagers[132.226.43.0.sales.alumno 2]"
       DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=9.7.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
-      DTS:DTSID="{B40D2DB5-6211-436D-8AF4-6610D667E21C}"
-      DTS:ObjectName="132.226.43.0.sales.alumno1">
+      DTS:DTSID="{A9882735-07AD-4AE4-9D16-A44448BA70B8}"
+      DTS:ObjectName="132.226.43.0.sales.alumno 2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="server=132.226.43.0;user id=alumno;database=sales;">
           <DTS:Password
             DTS:Name="password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACIUyduWspa/Bbftgxrr4CFI5lVBbQZySVCj5Y8VM5YaAAAAAAOgAAAAAIAACAAAAD15ceKI3/YzM/UiOjxDFiJdaRs3fYagp6LWcqUpExprCAAAAC5Pgh8o19asdlROZHHbsb0NTdsDZsJ2tLfRCGrYyaED0AAAAD/aQfs6LMpP4rQiL+G5B1dX91gGNG0XXtzQstpd2fYS2afzXiS/D+Y3zKuJ/ZA4Rk9/4nk/B6bBd38a2IWD1Cm</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASkJti+TRz0uLovbpwFZvqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAlP2zRj0J5ypCaiejqfO2+UkTGTpmzjPioKZa70nXp2wAAAAAOgAAAAAIAACAAAABfiS4JPISo+IfRA6+fM+Si9cxkRmaTdwjF9uSzupiosCAAAADmYq7u4rojCDTEOyOS/JqyiN9TLbRYUZtOEdeujU+NwEAAAAAtbf3wdxnbJChwtaGwzR2kY6CMoEBAohLw6hR3bO4eVf/mmwyPhbXIGQv8KnEeCUIgkn91nIp8gjriU9CJ53es</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -78,7 +73,7 @@
       DTS:ObjectName="localhost\MSSQLSERVER03.staging">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=localhost\MSSQLSERVER03;Initial Catalog=staging;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=staging;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -88,11 +83,11 @@
       DTS:ObjectName="server-tuia.database.windows.net.TDChistorySales.alumno">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales;Provider=MSOLEDBSQL.1;Initial File Name=;Server SPN=;Authentication=;Access Token=;">
+          DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales;Provider=MSOLEDBSQL.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB60pKQrH9z9L2wPvbPwlkygxs/ktG/9IB+GXAYHEVH1QAAAAAOgAAAAAIAACAAAAA5PF+hJMQTJVTivVU+A6NDEp4KoXDSeOC40gV8qxf2wiAAAABoOFJmg8GNmFM0vBY2/ltKLVu640StC57RFLEiS2Uoz0AAAAC19p4LHd72bwQ1jLWyIeby2gASgLYWKdq1Kipvrl04NNRAG7mGO7QQ+Y6KJ+NniY3EBn6DaawHkh0oRj8qbfiV</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASkJti+TRz0uLovbpwFZvqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABiPbz8VdoPl4NyDho7/D+HEcKZUtvsKSVBPqxfSQ0+NQAAAAAOgAAAAAIAACAAAAD+ie111XomnLvpAFy4gB1O7jaSigeRgvL34OXA8enhHSAAAABLTx9Z2LXfx1cQOUs2NER7Y0333x54u/tktWFWSegNtEAAAAC3cufY0/pxHUX0JvfHN/JT7uNJ4xvFhsHM7iVX3B2J2wpRsZ8EmYkMYKUnvUbCG/QDW2W6Z3eh1lpEw7CttBfy</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -103,11 +98,11 @@
       DTS:ObjectName="server-tuia.database.windows.net.TDChistorySales.alumno 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales;Provider=MSOLEDBSQL.1;">
+          DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales;Provider=MSOLEDBSQL.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4QO9vIHEPEG/5NCd/kHXRgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACeOHvfKaAUqQZqUfNznuzuX2IZVNbOuCCoDsNG4QdcMAAAAAAOgAAAAAIAACAAAAAae3wzoKo8t6y/H/kohJmpkTpZaW4oLRAgUqHPVrYyxSAAAAC2suW1upIjKpsOHzoUNtARteQ3DDbA/o3ir1OJao0ReUAAAABakysLv5yK3ZhB/060kdfHw96DtaAsLldt3Pa9NUgFTRHIfk7l7FYiAWkK+jHGygjQDai0HX4RPK7zq5ir7CmM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASkJti+TRz0uLovbpwFZvqgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABEbO7ZY5G+Ga4UyHb0NVhoexy32okMJeDZ2kImOIHPSgAAAAAOgAAAAAIAACAAAACPs18FBFClE64zoL1Ex5Qgah0Z0FvirzR4f5mGcqLAmCAAAAAXOzJW9gQjk7eAZICXE3UJC5huil/47+pJfUjZAI2sekAAAAB++MUnZw+gCLolk8IolZZuk4SXGA+wdQzCYicfjU4ZGHdzdgm/SEvOvieHpAFW1nIs1SwvVgcPWgu2ezkb6yQf</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -252,7 +247,7 @@
                   description="Nombre de la tabla de la base de datos de destino."
                   expressionType="Notify"
                   name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[dbo].[Discount_staging]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[Discount_Staging]</property>
                 <property
                   dataType="System.Int32"
                   description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
@@ -382,8 +377,8 @@
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT BILLING_ID, REGION, BRANCH_ID, `DATE`, CUSTOMER_ID, EMPLOYEE_ID
-FROM sales.billing;</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+FROM billing;</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -410,8 +405,8 @@ FROM sales.billing;</property>
               <connections>
                 <connection
                   refId="Package\Cargar Mysql\Mysql Billing.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
-                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -572,7 +567,7 @@ FROM sales.billing;</property>
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT BILLING_ID, PRODUCT_ID, QUANTITY
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
 FROM sales.billing_detail;</property>
                 <property
                   dataType="System.Int32"
@@ -600,8 +595,8 @@ FROM sales.billing_detail;</property>
               <connections>
                 <connection
                   refId="Package\Cargar Mysql\MySql Billing detail.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
-                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -705,8 +700,8 @@ FROM sales.billing_detail;</property>
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISCOUNT_ID, DATE_FROM, DATE_UNTIL, TOTAL_BILLING, PERCENTAGE
-FROM sales.discounts;</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+FROM discounts;</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -733,8 +728,8 @@ FROM sales.discounts;</property>
               <connections>
                 <connection
                   refId="Package\Cargar Mysql\MySql_Discounts.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
-                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -874,8 +869,8 @@ FROM sales.discounts;</property>
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT PRODUCT_ID, `DATE`, PRICE
-FROM sales.prices;</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+FROM prices;</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -902,8 +897,8 @@ FROM sales.prices;</property>
               <connections>
                 <connection
                   refId="Package\Cargar Mysql\MySql_Prices.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
-                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno1]"
+                  connectionManagerID="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[132.226.43.0.sales.alumno 1]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -1747,17 +1742,21 @@ FROM sales.prices;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="140,41.6"
+          Size="140,42"
           Id="Package\Cargar Mysql"
           TopLeft="499.999972681205,151.666665611995" />
         <NodeLayout
-          Size="180,41.6"
+          Size="180,42"
           Id="Package\Cargar stg SQL billing"
           TopLeft="120.833326731291,142.999999005596" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="170,42"
           Id="Package\Tarea Ejecutar SQL"
           TopLeft="139.999992350738,25.1333331585593" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Truncate tables"
+          TopLeft="477.499973910551,32.0666664436791" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="225.199992350737,66.7333331585593">
@@ -1792,10 +1791,6 @@ FROM sales.prices;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Truncate tables"
-          TopLeft="477.499973910551,32.0666664436791" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="552.699973910551,73.6666664436791">
@@ -1839,43 +1834,63 @@ FROM sales.prices;</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="124.8,41.6"
+          Size="142,42"
+          Id="Package\Cargar Mysql\MySql_Prices"
+          TopLeft="774.9999884516,167.799998524785" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Cargar Mysql\MySql_Discounts"
+          TopLeft="551.999991759658,172.199998375773" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Cargar Mysql\Billing_detail_staging"
+          TopLeft="361.99999460578,388.799994337559" />
+        <NodeLayout
+          Size="125,42"
           Id="Package\Cargar Mysql\stg_billing"
           TopLeft="195.999997079372,378.99999435246" />
         <NodeLayout
-          Size="165.6,41.6"
+          Size="140,42"
+          Id="Package\Cargar Mysql\Mysql Billing"
+          TopLeft="102.999998465181,155.999997675419" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Cargar Mysql\Prices_staging"
+          TopLeft="784.999988302589,382.799995321035" />
+        <NodeLayout
+          Size="166,42"
           Id="Package\Cargar Mysql\MySql Billing detail"
           TopLeft="298.999995544552,164.999997541308" />
         <NodeLayout
-          Size="136,41.6"
-          Id="Package\Cargar Mysql\Mysql Billing"
-          TopLeft="102.999998465181,155.999997675419" />
+          Size="160,42"
+          Id="Package\Cargar Mysql\Discount_Staging"
+          TopLeft="602.9999910146,385.199995201826" />
         <EdgeLayout
-          Id="Package\Cargar Mysql.Paths[Salida de origen de ADO NET]"
-          TopLeft="170.999998465181,197.599997675419">
+          Id="Package\Cargar Mysql.Paths[Salida de origen de ADO NET2]"
+          TopLeft="631.499991759658,214.199998375773">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="87.3999986141915,181.399996677041"
+              EndConnector="51.4999992549421,170.999996826053"
               Start="0,0"
-              End="87.3999986141915,173.899996677041">
+              End="51.4999992549421,163.499996826053">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,86.6999983385206" />
+                    End="0,81.4999984130265" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,86.6999983385206"
-                    Point2="0,90.6999983385206"
-                    Point3="4,90.6999983385206" />
+                    Point1="0,81.4999984130265"
+                    Point2="0,85.4999984130265"
+                    Point3="4,85.4999984130265" />
                   <mssgle:LineSegment
-                    End="83.3999986141915,90.6999983385206" />
+                    End="47.4999992549421,85.4999984130265" />
                   <mssgle:CubicBezierSegment
-                    Point1="83.3999986141915,90.6999983385206"
-                    Point2="87.3999986141915,90.6999983385206"
-                    Point3="87.3999986141915,94.6999983385206" />
+                    Point1="47.4999992549421,85.4999984130265"
+                    Point2="51.4999992549421,85.4999984130265"
+                    Point3="51.4999992549421,89.4999984130265" />
                   <mssgle:LineSegment
-                    End="87.3999986141915,173.899996677041" />
+                    End="51.4999992549421,163.499996826053" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1884,10 +1899,6 @@ FROM sales.prices;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\Cargar Mysql\Billing_detail_staging"
-          TopLeft="361.99999460578,388.799994337559" />
         <EdgeLayout
           Id="Package\Cargar Mysql.Paths[Salida de origen de ADO NET1]"
           TopLeft="381.799995544552,206.599997541308">
@@ -1922,40 +1933,32 @@ FROM sales.prices;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\Cargar Mysql\MySql_Discounts"
-          TopLeft="552.999991759658,172.199998375773" />
-        <NodeLayout
-          Size="160,41.6"
-          Id="Package\Cargar Mysql\Discount_Staging"
-          TopLeft="602.9999910146,385.199995201826" />
         <EdgeLayout
-          Id="Package\Cargar Mysql.Paths[Salida de origen de ADO NET2]"
-          TopLeft="632.599991759658,213.799998375773">
+          Id="Package\Cargar Mysql.Paths[Salida de origen de ADO NET]"
+          TopLeft="172.999998465181,197.999997675419">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50.3999992549419,171.399996826053"
+              EndConnector="85.499998614191,180.999996677041"
               Start="0,0"
-              End="50.3999992549419,163.899996826053">
+              End="85.499998614191,173.499996677041">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.6999984130263" />
+                    End="0,86.4999983385205" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,81.6999984130263"
-                    Point2="0,85.6999984130263"
-                    Point3="4,85.6999984130263" />
+                    Point1="0,86.4999983385205"
+                    Point2="0,90.4999983385205"
+                    Point3="4,90.4999983385205" />
                   <mssgle:LineSegment
-                    End="46.3999992549419,85.6999984130263" />
+                    End="81.499998614191,90.4999983385205" />
                   <mssgle:CubicBezierSegment
-                    Point1="46.3999992549419,85.6999984130263"
-                    Point2="50.3999992549419,85.6999984130263"
-                    Point3="50.3999992549419,89.6999984130263" />
+                    Point1="81.499998614191,90.4999983385205"
+                    Point2="85.499998614191,90.4999983385205"
+                    Point3="85.499998614191,94.4999983385205" />
                   <mssgle:LineSegment
-                    End="50.3999992549419,163.899996826053" />
+                    End="85.499998614191,173.499996677041" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1964,14 +1967,6 @@ FROM sales.prices;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\Cargar Mysql\MySql_Prices"
-          TopLeft="774.9999884516,167.799998524785" />
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\Cargar Mysql\Prices_staging"
-          TopLeft="784.999988302589,382.799995321035" />
         <EdgeLayout
           Id="Package\Cargar Mysql.Paths[Salida de origen de ADO NET3]"
           TopLeft="846.1999884516,209.399998524785">
@@ -2010,7 +2005,47 @@ FROM sales.prices;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Cargar Mysql\MySql_Prices">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Mysql\MySql_Discounts">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Mysql\Billing_detail_staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Cargar Mysql\stg_billing">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Mysql\Mysql Billing">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Mysql\Prices_staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2026,7 +2061,7 @@ FROM sales.prices;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Cargar Mysql\Mysql Billing">
+    design-time-name="Package\Cargar Mysql\Discount_Staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2039,11 +2074,11 @@ FROM sales.prices;</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\Cargar stg SQL billing\Billing_staging"
           TopLeft="303.333316759931,260.866664852632" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\Cargar stg SQL billing\Billing SQLserver"
           TopLeft="290.833317442901,99.6666659735971" />
         <EdgeLayout
@@ -2081,46 +2116,6 @@ FROM sales.prices;</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Cargar stg SQL billing\Billing_staging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Mysql\Billing_detail_staging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Mysql\MySql_Discounts">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Mysql\Discount_Staging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Mysql\MySql_Prices">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Mysql\Prices_staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
